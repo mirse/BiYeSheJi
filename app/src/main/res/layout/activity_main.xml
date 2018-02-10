@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.administrator.chatapp.Utils.SoftInputRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.chatapp.MainActivity">
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+   <include layout="@layout/title_toolbar"/>
+    </LinearLayout>
+    <ListView
+        android:layout_below="@id/ll_top"
+        android:id="@+id/lv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:background="@color/backcolor"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll"></ListView>
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/toolbar"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/iv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/star" />
+
+        <EditText
+            android:id="@+id/et_print"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_star"
+            android:background="@drawable/editsend"
+            android:drawableLeft="@drawable/biz_pc_main_tie_icon"
+            android:drawablePadding="5dp"
+            android:hint="请输入文字....."
+            android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textShortMessage"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:src="@drawable/more"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/et_print"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_send"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/et_print"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/send_button"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</com.example.administrator.chatapp.Utils.SoftInputRelativeLayout>

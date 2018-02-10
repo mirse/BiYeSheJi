@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/time_out"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_below="@id/time_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/touxiang"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <RelativeLayout
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_chat_name"
+                android:textColor="#000"
+                android:layout_alignParentRight="true"
+                android:text="用户1号:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#000"
+                android:singleLine="false"
+                android:textSize="16sp"
+                android:padding="15dp"
+                android:gravity="start"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tv_out"
+                android:drawablePadding="5dp"
+                android:background="@drawable/bubble1"
+                android:text="你好............"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>
